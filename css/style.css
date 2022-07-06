@@ -3,7 +3,7 @@
     --main-bg: linear-gradient(108.16deg, rgba(36, 134, 224, 0.9) 0%, rgba(233, 0, 253, 0.7) 82.2%);
     --container-bg: #303030;
     --main-txt-color : #fff;
-    --not-main-txt-color: rgba(255, 255, 255, 0.5);
+    --sub-main-txt-color: rgba(255, 255, 255, 0.5);
 }
 
 .break {
@@ -48,7 +48,7 @@ body {
 }
 
 #its-easy {
-    color: var(--not-main-txt-color);
+    color: var(--sub-main-txt-color);
     font-size: 1rem;
     padding-top: 7px;
 }
@@ -70,3 +70,35 @@ form {
     padding: 20px 50px 0px 50px;
 }
 
+button {
+    margin-top: 40px;
+}
+
+label {
+    color: var(--main-txt-color);
+}
+
+#log-in {
+    color: var(--main-txt-color);
+    margin-top: 10px;
+}
+
+a {
+    color: var(--main-txt-color);
+}
+
+button {
+    font-family: inherit;
+    color: #fff;
+    background-color: rgba(36, 134, 224, 0.9);;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    font-size: 1.25rem;
+}
+
+button:active {
+    transform: translateY(2px);
+}
