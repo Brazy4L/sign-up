@@ -11,7 +11,7 @@
 <body>
     <div class="svg">
     <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <a href="http://127.0.0.1:5500/index.html">
+        <a id="logo-link" href="http://127.0.0.1:5500/index.html">
             <path d="M120 60C120 26.8629 93.1371 0 60 0C26.8629 0 0 26.8629 0 60C0 93.1371 26.8629 120 60 120C93.1371 120 120 93.1371 120 60Z" fill="#191919"/>
             <path d="M58.9316 88.3336L37.9734 29.4053" stroke="#FAFF00" stroke-width="15"/>
             <path d="M81.87 33.4575L61.2076 88.3108" stroke="#FAFF00" stroke-width="15"/>
@@ -28,36 +28,36 @@
         <div class="form-wrapper"></div>
         <form action="http://127.0.0.1:5500/">
             <div class="forms" id="first-name">
-              <label for="first_name">First Name</label>
+              <label for="first_name">*First Name</label>
               <div class="break"></div>
-              <input type="text" id="first_name" name="first_name" placeholder="John">
+              <input type="text" id="first_name" name="first_name" placeholder="John" required minlength="2" maxlength="20">
             </div>
             <div class="forms" id="last-name">
-              <label for="last_name">Last Name</label>
+              <label for="last_name">*Last Name</label>
               <div class="break"></div>
-              <input type="text" id="last_name" name="last_name" placeholder="Doe">
+              <input type="text" id="last_name" name="last_name" placeholder="Doe" required minlength="2" maxlength="20">
             </div>
             <div class="break"></div>
             <div class="forms" id="email">
-                <label for="user_email">Email</label>
+                <label for="user_email">*Email</label>
                 <div class="break"></div>
-                <input type="email" id="user_email" name="email" placeholder="email@gmail.com">
+                <input type="email" id="user_email" name="email" placeholder="email@gmail.com" required>
             </div>
             <div class="forms" id="phone">
-                <label for="phone_number">Phone Number</label>
+                <label for="phone_number">*Phone Number</label>
                 <div class="break"></div>
-                <input type="tel" id="phone_number" name="phone_number">
+                <input type="tel" id="phone_number" name="phone_number" required pattern="^\+((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2[1-689])|9[0-58]|8[1246]|6[0-6]|5[1-8]|4[013-9]|3[0-469]|2[70]|7|1)(?:\W*\d){0,13}\d$" value="+">
             </div>
             <div class="break"></div>
             <div class="forms" id="password">
-                <label for="user_password">Password</label>
+                <label for="user_password">*Password</label>
                 <div class="break"></div>
-                <input type="password" id="user_password" name="password">
+                <input type="password" id="user_password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
             </div>
             <div class="forms" id="password-confirm">
-                <label for="user_password">Confirm Password</label>
+                <label>*Confirm Password</label>
                 <div class="break"></div>
-                <input type="password" id="user_password" name="password">
+                <input disabled>
             </div>
             <div class="break"></div>
             <button type="submit">Create Account</button>
