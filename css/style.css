@@ -1,5 +1,9 @@
 :root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --main-bg: linear-gradient(108.16deg, rgba(36, 134, 224, 0.9) 0%, rgba(233, 0, 253, 0.7) 82.2%);
+    --container-bg: #303030;
+    --main-txt-color : #fff;
+    --not-main-txt-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -8,11 +12,38 @@ body {
     background: var(--main-bg);
 }
 
-svg {
-    display: block;
+.svg {
+    width: max(60%, 340px);
+    display: flex;
+    justify-content: center;
+    padding-top: 19px;
     margin: 0 auto;
 }
 
 .container {
-    
+    display: block;
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--container-bg);
+    width: max(60%, 340px);
+    height: 680px;
+    border-radius: 120px;
+}
+
+#sign-up, #its-easy {
+    display:flex;
+    justify-content: center;
+}
+
+#sign-up {
+    color: var(--main-txt-color);
+    font-size: 3rem;
+    padding-top: 33px;
+}
+
+#its-easy {
+    color: var(--not-main-txt-color);
+    font-size: 1rem;
+    padding-top: 7px;
 }
